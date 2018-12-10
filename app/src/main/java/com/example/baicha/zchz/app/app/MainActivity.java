@@ -10,6 +10,7 @@ import android.widget.RadioGroup;
 import com.example.baicha.zchz.R;
 import com.example.baicha.zchz.app.app.base.BaseFragment;
 import com.example.baicha.zchz.app.app.dingdan.fragmment.DingdanFragment;
+import com.example.baicha.zchz.app.app.faxian.fragment.FaxianFragment;
 import com.example.baicha.zchz.app.app.shouye.fragment.ShouyeFragment;
 import com.example.baicha.zchz.app.app.wode.fragment.WodeFragment;
 
@@ -51,11 +52,14 @@ public class MainActivity extends FragmentActivity {
                     case R.id.shouye:
                         position = 0;
                         break;
-                    case R.id.dingdan:
+                    case R.id.faxian:
                         position = 1;
                         break;
-                    case R.id.wode:
+                    case R.id.dingdan:
                         position = 2;
+                        break;
+                    case R.id.wode:
+                        position = 3;
                         break;
                     default:
                         position = 0;
@@ -80,6 +84,7 @@ public class MainActivity extends FragmentActivity {
     private void initFragment(){
         fragments = new ArrayList<>();
         fragments.add(new ShouyeFragment());
+        fragments.add(new FaxianFragment());
         fragments.add(new DingdanFragment());
         fragments.add(new WodeFragment());
     }

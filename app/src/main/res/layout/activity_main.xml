@@ -31,6 +31,16 @@
         android:textColor="@drawable/text_setcolor"
         android:text="首页"/>
     <RadioButton
+            android:id="@+id/faxian"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@drawable/set_faxian"
+            android:textColor="@drawable/text_setcolor"
+            android:text="发现"/>
+    <RadioButton
         android:id="@+id/dingdan"
         android:layout_weight="1"
         android:layout_width="0dp"
