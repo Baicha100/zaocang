@@ -59,6 +59,7 @@ public class ShouyeFragment extends BaseFragment {
             }
         });
     }
+
   public void list(){
       List<Map<String,Object>> listItems = new ArrayList<>();
       for (int i = 0; i < dian.imageId.length; i++ ){
