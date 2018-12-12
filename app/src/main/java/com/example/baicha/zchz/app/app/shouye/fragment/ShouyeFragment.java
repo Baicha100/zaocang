@@ -31,7 +31,7 @@ public class ShouyeFragment extends BaseFragment {
     private Banner banner;
     private ListView listView;
     private Dian dian = new Dian();
-    private TextView shitang,chaoshi;
+    private TextView shitang,chaoshi,qita;
     @Override
 
     protected View initView() {
@@ -39,7 +39,8 @@ public class ShouyeFragment extends BaseFragment {
         listView = view.findViewById(R.id.listv);
         banner=view.findViewById(R.id.banner);
         shitang = view.findViewById(R.id.shitang);
-
+        chaoshi = view.findViewById(R.id.chaoshi);
+        qita = view.findViewById(R.id.qitq);
         return view;
     }
     @Override
@@ -53,12 +54,28 @@ public class ShouyeFragment extends BaseFragment {
         shitang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(),"123",Toast.LENGTH_SHORT).show();
                Intent intent = new  Intent(getActivity(),Shitang.class);
                startActivity(intent);
             }
         });
+        chaoshi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new  Intent(getActivity(),Chaoshi.class);
+                startActivity(intent);
+            }
+        });
+        qita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new  Intent(getActivity(),Qita.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
+
 
   public void list(){
       List<Map<String,Object>> listItems = new ArrayList<>();

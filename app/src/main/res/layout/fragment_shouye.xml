@@ -101,6 +101,7 @@
                     android:gravity="center"
                     android:text="食堂"/>
                 <TextView
+                    android:id="@+id/chaoshi"
                     android:background="@drawable/yyuan"
                     android:layout_marginLeft="40dp"
                     android:layout_width="55dp"
@@ -108,8 +109,8 @@
                     android:gravity="center"
                     android:text="超市"/>
                 <TextView
+                    android:id="@+id/qitq"
                     android:background="@drawable/gyuan"
-
                     android:layout_marginLeft="40dp"
                     android:layout_width="55dp"
                     android:layout_height="55dp"
