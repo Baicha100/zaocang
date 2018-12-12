@@ -7,8 +7,15 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_height="wrap_content"
         android:background="#13227a">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

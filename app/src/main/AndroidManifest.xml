@@ -22,6 +22,8 @@
         </activity>
         <activity
             android:name=".app.app.MainActivity"></activity>
+        <activity
+            android:name=".app.app.shouye.fragment.Shitang"></activity>
     </application>
 
 </manifest>
