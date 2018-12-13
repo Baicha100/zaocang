@@ -35,6 +35,8 @@ public class DingdanFragment extends BaseFragment {
 
     private String[] jiage = new String[]{"￥8.50","￥7.50","￥8.00"};
 
+    private String[] zailai = new String[]{"立即支付","再来一单","再来一单"};
+
 
 
     @Override
@@ -61,15 +63,34 @@ public class DingdanFragment extends BaseFragment {
             map.put("shijian",shijian[i]);
             map.put("caipin",caipin[i]);
             map.put("jiage",jiage[i]);
+            map.put("zailai",zailai[i]);
             listItems.add(map);
         }
         SimpleAdapter adapter = new SimpleAdapter(
                 getActivity(),
                 listItems,
                 R.layout.dingdan,
-                new  String[]{"dianming","image","dingdan","shijian","caipin","jiage"},
-                new int[] {R.id.dianming, R.id.image, R.id.dingdan, R.id.shijian, R.id.caipin,R.id.jiage}
+                new  String[]{"dianming","image","dingdan","shijian","caipin","jiage","zailai"},
+                new int[] {R.id.dianming, R.id.image, R.id.dingdan, R.id.shijian, R.id.caipin,R.id.jiage,R.id.zailai}
         );
         listView.setAdapter(adapter);
+        //设置listview点击事件
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //position 点击的Item位置，从0开始算
+                // Intent intent=new Intent();
+                // intent.putExtra("xx","");//传递给下一个Activity的值
+                //  startActivity(intent);//启动Activity
+                if (position == 0){
+                    Toast.makeText(getActivity(),"123",Toast.LENGTH_SHORT).show();}
+                if (position == 1){
+                    Toast.makeText(getActivity(),"1",Toast.LENGTH_SHORT).show();}
+                if (position == 2){
+                    Toast.makeText(getActivity(),"2",Toast.LENGTH_SHORT).show();}
+                if (position == 3){
+                    Toast.makeText(getActivity(),"3",Toast.LENGTH_SHORT).show();}
+            }
+        });
     }
 }

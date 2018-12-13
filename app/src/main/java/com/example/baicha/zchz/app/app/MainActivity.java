@@ -42,6 +42,14 @@ public class MainActivity extends FragmentActivity {
          * 设置RadioGroup的监听
          */
         initListener();
+        int id = getIntent().getIntExtra("id", 0);
+        if (id == 1) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment,new WodeFragment())
+                    .addToBackStack(null)
+                    .commit();
+        }
 
     }
     private void initListener() {

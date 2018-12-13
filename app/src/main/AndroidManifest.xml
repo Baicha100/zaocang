@@ -28,6 +28,10 @@
                 android:name=".app.app.shouye.fragment.Qita"></activity>
         <activity
             android:name=".app.app.shouye.fragment.Chaoshi"></activity>
+        <activity
+            android:name=".app.app.Dengru.Dengru"></activity>
+        <activity
+            android:name=".app.app.Dengru.Zhuce"></activity>
     </application>
 
 </manifest>
