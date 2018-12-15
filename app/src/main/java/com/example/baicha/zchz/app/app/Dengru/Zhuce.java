@@ -40,7 +40,11 @@ public class Zhuce extends Activity {
                 String password1 = mima1.getText().toString();
                 //判断密码是否为空
                 UserDAO userDAO = new UserDAO(Zhuce.this);
-                if(!username.isEmpty() && !password.isEmpty() && !password1.isEmpty()) {
+                if(username.isEmpty() || password.isEmpty() || password1.isEmpty())
+                {
+                    Toast.makeText(Zhuce.this, "请完善注册信息!", Toast.LENGTH_SHORT).show();
+                }
+                if (!username.isEmpty() && !password.isEmpty() && !password1.isEmpty()) {
 
                     if(!password.equals(password1)) {
                         Toast.makeText(Zhuce.this, "两次密码不一样，请重新输入!", Toast.LENGTH_SHORT).show();
@@ -61,6 +65,7 @@ public class Zhuce extends Activity {
                                     password );
                             userDAO.add(tb_user);
                             Toast.makeText(Zhuce.this, "注册成功", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
                     }
                 }

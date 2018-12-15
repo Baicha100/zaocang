@@ -32,6 +32,8 @@
             android:name=".app.app.Dengru.Dengru"></activity>
         <activity
             android:name=".app.app.Dengru.Zhuce"></activity>
+        <activity
+            android:name=".app.app.shouye.fragment.Dian1"></activity>
     </application>
 
 </manifest>

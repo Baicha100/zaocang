@@ -3,6 +3,7 @@ package com.example.baicha.zchz.app.app.shouye.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -16,11 +17,19 @@ import java.util.List;
 
 public class Chaoshi extends Activity {
     private Banner banner;
+    private ImageView imageView;
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chaoshi);
         banner = findViewById(R.id.banner1);
+        imageView = findViewById(R.id.fanhui);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         init();
     }
     public void init(){

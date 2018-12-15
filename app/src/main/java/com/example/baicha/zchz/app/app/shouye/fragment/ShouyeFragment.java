@@ -105,7 +105,10 @@ public class ShouyeFragment extends BaseFragment {
              // intent.putExtra("xx","");//传递给下一个Activity的值
               //  startActivity(intent);//启动Activity
               if (position == 0){
-                  Toast.makeText(getActivity(),"123",Toast.LENGTH_SHORT).show();}
+                  Intent intent = new Intent(getActivity(),Dian1.class);
+                  startActivity(intent);
+
+              }
               if (position == 1){
                   Toast.makeText(getActivity(),"1",Toast.LENGTH_SHORT).show();}
               if (position == 2){

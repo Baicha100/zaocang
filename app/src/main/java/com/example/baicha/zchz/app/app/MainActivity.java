@@ -17,7 +17,7 @@ import com.example.baicha.zchz.app.app.wode.fragment.WodeFragment;
 import java.util.ArrayList;
 public class MainActivity extends FragmentActivity {
     FrameLayout frameLayout;
-    RadioGroup rgmain;
+    private  RadioGroup rgmain;
 
     private int position = 0;
     /**
