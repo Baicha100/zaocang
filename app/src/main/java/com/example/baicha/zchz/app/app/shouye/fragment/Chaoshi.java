@@ -14,7 +14,6 @@ import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class Chaoshi extends Activity {
     private Banner banner;
     private ImageView imageView;

@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.example.baicha.zchz.R;
 import com.example.baicha.zchz.app.app.Dao.UserDAO;
 import com.example.baicha.zchz.app.app.MainActivity;
-
 public class Dengru extends Activity {
     private Button button;
     private TextView yonghuming,mima;

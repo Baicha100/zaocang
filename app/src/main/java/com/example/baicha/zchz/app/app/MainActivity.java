@@ -42,11 +42,12 @@ public class MainActivity extends FragmentActivity {
          * 设置RadioGroup的监听
          */
         initListener();
+
         int id = getIntent().getIntExtra("id", 0);
         if (id == 1) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.fragment,new WodeFragment())
+                    .replace(R.id.fragment,new ShouyeFragment())
                     .addToBackStack(null)
                     .commit();
         }
@@ -69,9 +70,7 @@ public class MainActivity extends FragmentActivity {
                     case R.id.wode:
                         position = 3;
                         break;
-                    default:
-                        position = 0;
-                        break;
+
                 }
                 //根据位置取不同的Fragment
                 BaseFragment baseFragment = getFragment(position);

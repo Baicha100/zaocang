@@ -30,12 +30,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical">
-                <ImageView
+                <com.example.baicha.zchz.app.app.base.RoundImageView
                     android:id="@+id/img_account_avatar1"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/wode3"
-                    />
+                    android:src="@drawable/wode3"></com.example.baicha.zchz.app.app.base.RoundImageView>
                 <TextView
                     android:id="@+id/txt_account_name1"
                     android:layout_width="wrap_content"
