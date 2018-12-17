@@ -38,6 +38,8 @@
             android:name=".app.app.Dengru.Zhuce"></activity>
         <activity
             android:name=".app.app.shouye.fragment.Dian1"></activity>
+        <activity android:name=".app.app.Administrators.Administrator"></activity>
+        <activity android:name=".app.app.Business.Busines"></activity>
     </application>
 
 </manifest>

@@ -107,7 +107,6 @@ public class ShouyeFragment extends BaseFragment {
               if (position == 0){
                   Intent intent = new Intent(getActivity(),Dian1.class);
                   startActivity(intent);
-
               }
               if (position == 1){
                   Toast.makeText(getActivity(),"1",Toast.LENGTH_SHORT).show();}

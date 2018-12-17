@@ -25,9 +25,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.baicha.zchz.R;
+import com.example.baicha.zchz.app.app.Business.Busines;
 import com.example.baicha.zchz.app.app.Dengru.Dengru;
-import com.example.baicha.zchz.app.app.MainActivity;
 import com.example.baicha.zchz.app.app.base.BaseFragment;
+import com.example.baicha.zchz.app.app.shouye.fragment.Dian1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,7 +39,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class WodeFragment extends BaseFragment {
     private ListView listView;
-    private TextView textView,gerenxinxi;
+    private TextView textView,gerenxinxi,wode;
     private SharedPreferences sp;
     private ImageView imageView;
     private int[] imageId = new int[]{R.drawable.wodedizhi,R.drawable.wodepingjia,R.drawable.kefu,R.drawable.tuichu};
@@ -51,11 +52,11 @@ public class WodeFragment extends BaseFragment {
         textView = view.findViewById(R.id.txt_account_name1);
         gerenxinxi = view.findViewById(R.id.gerenxinxi);
         imageView = view.findViewById(R.id.img_account_avatar1);
+        wode = view.findViewById(R.id.wode);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("yonghu", MODE_PRIVATE);
         textView.setText(sharedPreferences.getString("用户名","请先登入"));
         SharedPreferences sharedPreferences1 = getActivity().getSharedPreferences("yonghu", MODE_PRIVATE);
         gerenxinxi.setText(sharedPreferences1.getString("是否登录","登入查看信息"));
-
         return view;
     }
 
@@ -78,6 +79,41 @@ public class WodeFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 goToast();
+            }
+        });
+        wode.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Toast.makeText(getActivity(), "长按事件监听", Toast.LENGTH_SHORT).show();
+                AlertDialog alert = new AlertDialog.Builder(getActivity()).create();
+                alert.setTitle("系统提示：");
+                alert.setMessage("选择进入商家或管理员端");
+                //添加“商家”入口
+                alert.setButton(DialogInterface.BUTTON_NEGATIVE, "商家", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getActivity(), "商家", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(),Busines.class);
+                        startActivity(intent);
+                    }
+                });
+                //添加“管理员”入口
+                alert.setButton(DialogInterface.BUTTON_POSITIVE, "管理员", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getActivity(), "管理员", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+                //添加“取消”
+                    alert.setButton(DialogInterface.BUTTON_NEUTRAL, "取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getActivity(), "取消", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                    alert.show();
+                return false;
             }
         });
 
